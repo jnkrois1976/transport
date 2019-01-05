@@ -1,0 +1,325 @@
+header{
+    background-color: #19222b;
+    color: #fff;
+    border-bottom: solid 1px #95cc28;
+    z-index: 4;
+}
+.homepage main{
+    background-image: url('/images/mainBg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+.homepage main.AL{
+    background-image: url('/images/states_bg/AL.jpg');
+}
+.homepage main.AK{
+    background-image: url('/images/states_bg/AK.jpg');
+}
+.homepage main.AZ{
+    background-image: url('/images/states_bg/AZ.jpg');
+}
+.homepage main.AR{
+    background-image: url('/images/states_bg/AR.jpg');
+}
+.homepage main.FL{
+    background-image: url('/images/states_bg/FL.jpg');
+}
+.homepage main.CA{
+    background-image: url('/images/states_bg/CA.jpg');
+}
+.homepage main.CO{
+    background-image: url('/images/states_bg/CO.jpg');
+}
+.homepage main.CT{
+    background-image: url('/images/states_bg/CT.jpg');
+}
+.homepage main.DE{
+    background-image: url('/images/states_bg/DE.jpg');
+}
+.homepage main.DC{
+    background-image: url('/images/states_bg/DC.jpg');
+}
+.homepage main.GA{
+    background-image: url('/images/states_bg/GA.jpg');
+}
+.homepage main.HI{
+    background-image: url('/images/states_bg/HI.jpg');
+}
+.homepage main.ID{
+    background-image: url('/images/states_bg/ID.jpg');
+}
+.homepage main.IL{
+    background-image: url('/images/states_bg/IL.jpg');
+}
+.homepage main.IN{
+    background-image: url('/images/states_bg/IN.jpg');
+}
+.homepage main.IA{
+    background-image: url('/images/states_bg/IA.jpg');
+}
+.homepage main.KS{
+    background-image: url('/images/states_bg/KS.jpg');
+}
+.homepage main.KY{
+    background-image: url('/images/states_bg/KY.jpg');
+}
+.homepage main.LA{
+    background-image: url('/images/states_bg/LA.jpg');
+}
+.homepage main.ME{
+    background-image: url('/images/states_bg/ME.jpg');
+}
+.homepage main.MD{
+    background-image: url('/images/states_bg/MD.jpg');
+}
+.homepage main.MA{
+    background-image: url('/images/states_bg/MA.jpg');
+}
+.homepage main.MI{
+    background-image: url('/images/states_bg/MI.jpg');
+}
+.homepage main.MN{
+    background-image: url('/images/states_bg/MN.jpg');
+    background-position: initial;
+}
+.homepage main.MS{
+    background-image: url('/images/states_bg/MS.jpg');
+}
+.homepage main.MO{
+    background-image: url('/images/states_bg/MO.jpg');
+}
+.homepage main.MT{
+    background-image: url('/images/states_bg/MT.jpg');
+}
+.homepage main.NE{
+    background-image: url('/images/states_bg/NE.jpg');
+}
+.homepage main.NV{
+    background-image: url('/images/states_bg/NV.jpg');
+}
+.homepage main.NH{
+    background-image: url('/images/states_bg/NH.jpg');
+}
+.homepage main.NJ{
+    background-image: url('/images/states_bg/NJ.jpg');
+}
+.homepage main.NM{
+    background-image: url('/images/states_bg/NM.jpg');
+}
+.homepage main.NY{
+    background-image: url('/images/states_bg/NY.jpg');
+}
+.homepage main.NC{
+    background-image: url('/images/states_bg/NC.jpg');
+    background-position: initial;
+}
+.homepage main.ND{
+    background-image: url('/images/states_bg/ND.jpg');
+}
+.homepage main.OH{
+    background-image: url('/images/states_bg/OH.jpg');
+}
+.homepage main.OK{
+    background-image: url('/images/states_bg/OK.jpg');
+}
+.homepage main.OR{
+    background-image: url('/images/states_bg/OR.jpg');
+}
+.homepage main.PA{
+    background-image: url('/images/states_bg/PA.jpg');
+}
+.homepage main.RI{
+    background-image: url('/images/states_bg/RI.jpg');
+}
+.homepage main.SC{
+    background-image: url('/images/states_bg/SC.jpg');
+}
+.homepage main.SD{
+    background-image: url('/images/states_bg/SD.jpg');
+}
+.homepage main.TN{
+    background-image: url('/images/states_bg/TN.jpg');
+}
+.homepage main.TX{
+    background-image: url('/images/states_bg/TX.jpg');
+}
+.homepage main.UT{
+    background-image: url('/images/states_bg/UT.jpg');
+}
+.homepage main.VT{
+    background-image: url('/images/states_bg/VT.jpg');
+}
+.homepage main.VA{
+    background-image: url('/images/states_bg/VA.jpg');
+}
+.homepage main.WA{
+    background-image: url('/images/states_bg/WA.jpg');
+}
+.homepage main.WV{
+    background-image: url('/images/states_bg/WV.jpg');
+}
+.homepage main.WI{
+    background-image: url('/images/states_bg/WI.jpg');
+}
+.homepage main.WY{
+    background-image: url('/images/states_bg/WY.jpg');
+}
+nav ul a:link, nav ul a:visited, nav ul a:active{
+    color: #068aa1;
+    font-weight: 300;
+    transition: color 0.5s ease;
+}
+nav ul a:hover{
+    color: #fff;
+}
+.socialIcons{
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+#progressTracker{
+    background-color: #23303d;
+    color: #d0dadd;
+    z-index: 3;
+    /*margin-top: -100px;*/
+
+}
+#progressTracker > div:first-child > div > div:first-child{
+    font-weight: 300;
+}
+#content{
+    color: #d0dadd;
+    background: -moz-linear-gradient(top,  rgba(25,34,43,1) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top,  rgba(25,34,43,1) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom,  rgba(25,34,43,1) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19222b', endColorstr='#00000000',GradientType=0 );
+}
+.wizardSteps{
+    background-color: rgba(255,255,255,0.9);
+    color: #23303d;
+}
+/* BOOTSTRAP OVERIDES */
+.btn-primary{
+    background-color: #95cc28;
+    border: solid 1px #95cc28;
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 2px #18222b;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus{
+    background-color: #a8d54f;
+    border: none;
+    outline: none;
+    border: solid 1px #95cc28;
+}
+.btn-info, .btn-info:hover {
+    color: #fff;
+    background-color: #068aa1;
+    border-color: #068aa1;
+}
+/* BOOTSTRAP OVERIDES */
+.trackerLgFont{
+    font-size: 4em;
+    line-height: 0.75em;
+    /*height: 48px;*/
+    font-style: italic;
+    color: #95cc28;
+}
+.trackerMdFont{
+    font-size: 1.3em;
+    line-height: 1.5em;
+    text-transform: capitalize;;
+    font-style: italic;
+    color: #95cc28;
+}
+.trackerIcon{
+    font-size: 1.3em;
+    display: none;
+}
+.dollarAmount{
+    color: #068aa1;
+    font-weight: normal;
+    letter-spacing: -3px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+#quoteIdNumber{
+    font-family: "Tahoma", Helvetica, Arial, serif;
+    text-align: center;
+}
+hr{
+    border-top: 4px solid #fff;
+    /*box-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);*/
+}
+legend{
+    border-bottom: none;
+    display: none;
+}
+/* BOOTSTRAP OVERRIDES */
+footer{
+    background-color: #d0dadd;
+    color: #23303d
+}
+input.invalid{
+    border: solid 1px #cc0000;
+}
+.checkData{
+    background-color: #cc0000;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    left: 54%;
+}
+/*.sq-input {
+  border: 1px solid #CC0000;
+  margin-bottom: 10px;
+  padding: 1px;
+}
+.sq-input--focus {
+  outline-width: 5px;
+  outline-color: #70ACE9;
+  outline-offset: -1px;
+  outline-style: auto;
+}*/
+/*.sq-input--error {
+  outline-width: 5px;
+  outline-color: #FF9393;
+  outline-offset: 0px;
+  outline-style: auto;
+}*/
+#howItWorks span.glyphicon{
+    color: #068aa1;
+}
+#errors{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #cc0000;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5em;
+    display: none;
+}
+#errors.server{
+    display: block;
+}
+#startGenerator::after, #generateStaticQuote::after, a.btn::after,
+.btn-chevron::after{
+    content: " \203A";
+    transform: scale(2.5);
+    transform-origin: -5px 3px;
+    display: inline-block;
+    line-height: 1px;
+    padding-right: 10px;
+}
+.ratings{
+    color: #95cc28;
+    font-size: 150%;
+}
+#generator_banner a{
+    transform: scale(1.5);
+}

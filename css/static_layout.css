@@ -1,0 +1,737 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+header{
+    height: 10%;
+}
+footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    min-height: 10%;
+}
+footer > div:first-child{
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+footer > div:last-child{
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+#loading, #progressTracker, #menuIcon{
+    display: none;
+}
+header{
+    display: flex;
+    flex-flow: row;
+}
+header > div{
+    width: 15%;
+}
+header > nav{
+    width: 70%;
+}
+header ul{
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+header > div:last-child{
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+#loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+#loading > div{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+}
+#loading img{
+    width: 120px;
+    height: 120px;
+}
+#logo {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    /*background-image: url(/svg/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;*/
+}
+.homepage main{
+    min-height: 68%;
+}
+.homepage main #content{
+    height: 100%;
+    position: relative;
+    border-top: solid 1px #000;
+}
+form#quoteGenerator{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+#progressTracker{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+}
+#progressTracker > div:first-child{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+#progressTracker > div:first-child > div{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 6px;
+}
+.arrow_box {
+    position: absolute;
+    background: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #23303d;
+    font-weight: 600;
+    bottom: -35px;
+    left: 50%;
+    right: 0;
+    width: 50%;
+    margin-left: -25%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 1px 1px 3px #000;
+
+}
+.arrow_box:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.trackerStep:hover{
+    cursor: pointer;
+}
+.trackerStep:hover + .arrow_box, .trackerStep.change + .arrow_box{
+    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+#stepZero{
+    text-align: center;
+    z-index: 2;
+}
+#stepZero ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 40px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #000;
+}
+#stepZero{
+    margin-top: 100px;
+}
+#stepZero ul li{
+    width: 33%;
+}
+#stepZero ul li::before, #static_generator > div:first-child ul li::before{
+    content: "\25CE ";
+    color:#95cc28;
+    padding-right: 5px;
+}
+.wizardSteps{
+    opacity: 0;
+    display: none;
+    text-align: center;
+    padding: 10px 10px;
+}
+.wizardSteps > div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.wizardSteps .userQuote, #generatedQuote .userQuote{
+    border: solid 4px #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    width: 25%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.wizardSteps .userQuote a{
+    display: inline-block;
+}
+.wizardSteps .form-group{
+    width: 30%;
+    position: relative;
+}
+.form-group.suggestBox{
+    width: 40%;
+    position: relative;
+}
+.wizardSteps ul, #static_generator ul.zipCitySuggest{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    max-height: 300px;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.wizardSteps ul li, #static_generator ul.zipCitySuggest li{
+    text-align: left;
+    padding: 5px 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.wizardSteps ul li:hover, #static_generator ul.zipCitySuggest li:hover{
+    color: #fff;
+    background-color: #068aa1;
+}
+.wizardSteps > div#carInfo, .wizardSteps > div#shippingOptions, .wizardSteps > div#generatedQuote, .wizardSteps > div#quoteOptions, .wizardSteps > div#contactInfo{
+    justify-content: space-around;
+}
+div#quoteOptions > div{
+    width: 35%;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.wizardSteps > div#quoteOptions > div small{
+    display: block;
+}
+.wizardSteps > div#shippingOptions > div{
+    width: 20%;
+}
+.wizardSteps > div#shippingOptions fieldset div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.wizardSteps > div#shippingOptions fieldset div div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.calendar {
+	border: solid 1px #D4D4D4;
+	border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #ccc;
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.calendar td,
+.calendar th {
+	vertical-align: middle;
+	border: solid 1px #d4d4d4;
+	text-align: center;
+	min-width: 30px;
+	height: 30px;
+}
+.calendar td.future span{
+    display: block;
+    color: #777;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    height: 100%;
+    line-height: 30px;
+}
+.calendar td.future span.selected, .calendar td.future span.selected:hover{
+    background-color: #95cc28;
+    color: #fff;
+    font-style: italic;
+}
+.calendar td.future span:hover{
+    background-color: #068aa1;
+    color: #fff;
+    cursor: pointer;
+}
+body:not(.homepage) footer{
+    flex-basis: 100%;
+}
+body:not(.homepage) main > div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #efefef;
+}
+body:not(.homepage) main > div > div{
+    width: 80%;
+    margin: 20px;
+    padding: 0 20px 20px 20px;
+    border: solid 3px #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+body:not(.homepage) main > div > div.modal{
+    border: none;
+    width: 100%;
+}
+#detailsBreakdown, #generatedQuote{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#detailsBreakdown, #generatedQuote{
+    justify-content: space-around;
+}
+#generatedQuote .userQuote{
+    text-align: center;
+    padding: 0 10px;
+}
+#detailsBreakdown table{
+    width: 100%;
+}
+.breakdownBox{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 45%;
+}
+.breakdownBox > h3{
+    width: auto;
+    margin-top: 0;
+}
+#bookService{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#bookService > fieldset{
+    width: 32%;
+    border: solid 1px #95cc28;
+    padding: 0 20px;
+}
+#bookService > fieldset:last-child{
+    margin-right: 0;
+}
+#bookService > div{
+    width: 32%;
+    padding: 0;
+}
+#bookService > div > fieldset{
+    border: solid 1px #95cc28;
+    padding: 0 20px;
+}
+#bookService > fieldset legend, #bookService > div > fieldset legend{
+    display: block;
+    width: auto;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+#addressDetails .form-group, .expDateCvv, #billingDetails .form-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.expDateCvv > div{
+    width: 30%;
+}
+#autocomplete2, #autocomplete, #autocomplete3{
+    width: 100%;
+}
+#street_number2, #street_number, #street_number3{
+    width: 30%;
+}
+#route2, #route, #route3{
+    width: 65%;
+}
+#locality2, #locality, #locality3 {
+    width: 55%;
+}
+#administrative_area_level_12, #administrative_area_level_1, #administrative_area_level_13{
+    width: 20%;
+}
+#postal_code2, #postal_code, #postal_code3{
+    width: 20%;
+}
+.card-logos{
+	margin-top: 10px;
+}
+.card-logos img{
+	width:60px;
+	height: auto;
+	margin-right: 5px;
+}
+#static_generator{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.getAquote #static_generator{
+    margin: 10px auto 0;
+}
+.getAquote #static_generator{
+    justify-content: center;
+}
+#static_generator > div:first-child ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+}
+#static_generator > div:first-child ul li{
+    height: 34px;
+    line-height: 34px;
+}
+#static_generator > div{
+    width: 50%;
+    padding: 10px;
+}
+#static_generator > div:first-child{
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#static_generator fieldset{
+    padding: 20px;
+}
+.getAquote #static_generator fieldset{
+    padding: 20px 0 0 0;
+}
+#static_generator fieldset h1{
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #95cc28;
+}
+#static_generator fieldset > div{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#static_generator fieldset > div.form-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+#static_generator fieldset > div#radio-control-group{
+    margin-bottom: 20px;
+    border-bottom: solid 1px #95cc28;
+}
+#static_generator fieldset > div#radio-control-group, #carData{
+    justify-content: space-between;
+}
+#static_generator > div:first-child h1 + div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#static_generator > div:first-child h1 + div span{
+    font-weight: 100;
+    width: 40%;
+}
+#static_generator > div:last-child{
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #23303d;
+}
+#static_generator_form{
+    width: 100%;
+}
+#static_generator_form .input-group{
+    width: 30%;
+}
+#carData > div{
+    width: 30%;
+}
+#carData > div:first-child{
+    width: 22%;
+}
+.radio-control-group, #features{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#features{
+    width: 95%;
+    margin: 0 20px;
+    border: solid 1px rgba(149,204,40,0.3);
+    padding: 20px;
+    align-self: flex-start;
+}
+#features ul{
+    margin: 0;
+    padding: 0;
+}
+.radio-control{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#generatedQuoteWrapper h1{
+    margin-top: 0;
+}
+#generatedQuoteWrapper .userQuote{
+    /*width: 30%;*/
+    display: flex;
+    flex-flow: column nowrap;
+}
+/*#generatedQuoteWrapper .btn-primary{
+    font-size: 100%;
+    padding: 10px;
+}*/
+#quoteOptions{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#quoteOptions > div{
+    width: 45%;
+}
+#quoteOptions small{
+    display: inline-block;
+    line-height: 12px;
+}
+#generatedQuoteWrapper {
+    display: none;
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.9);
+    color: #333;
+    margin: 20px auto;
+    text-align: center;
+}
+.getAquote #generatedQuoteWrapper{
+    background: none;
+    width: 100%;
+}
+#generatedQuote h3{
+    margin-top: 10px;
+}
+#quoteOptions h4{
+    margin-top: 0;
+}
+#agreementWrapper{
+    position: relative;
+}
+#agreementRequired::after{
+    content: "\1F891";
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    font-size: 5em;
+    line-height: 1px;
+    color: #cc0000;
+}
+ #formFailedMsg, #agreementRequired{
+    background-color: #cc0000;
+    color: #fff;
+    border: solid 1px #fff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+ }
+ #agreementRequired{
+     position: absolute;
+     z-index: 1;
+     box-shadow: 1px 1px 3px #000;
+     border: solid 1px #cc0000;
+ }
+#saveSuccess, #formFailedMsg, #static_generator #static_generator_form #formFailedMsg, #agreementRequired{
+    display: none;
+}
+main + div{
+    text-align: center;
+    padding: 20px 0 10px 0;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #fff;
+}
+#orderNumber{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+#whatNow{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+#howItWorks{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+#howItWorks > div{
+    width: 20%;
+    text-align: center;
+}
+#howItWorks > div h3{
+    /*border-bottom: solid 1px #95cc28;*/
+}
+#contactUs{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+#contactUs > div{
+    width: 40%;
+}
+#generator_banner{
+    background-color: #068aa1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    padding: 10px 0;
+}
+#generator_banner > div{
+    border: none;
+    margin-bottom: 0;
+    width: 30%;
+    text-align: center;
+}
+#generator_banner h1, #generator_banner p{
+    margin: 0;
+}
+.homepage #welcomeBack .modal-dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 50%;
+}
+#badgesAndSeals{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 0 10px 0;
+    border-bottom: solid 1px #fff;
+}
+#testimonials{
+    background-color: #068aa1;
+    color:  #fff;
+    font-size: 80%;
+}
+#testimonials ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#testimonials ul li{
+    width: 15%;
+    text-align: justify;
+}
+#testimonials ul li > div:first-child{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#carOptionsHeader{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#saveQuoteDetails{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#carYearOlder, #carModelOlder, #carMakeOlder{
+    display: none;
+}
+#stepSix .autoSavedQuote, .autoSavedQuote{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+}
+.autoSavedQuote > div, .autoSavedQuote > p{
+    text-align: left;
+}
+.terms_and_conditions li{
+    margin-bottom: 20px;
+}
+#otherResources {
+    width: 100%;
+}
+#otherResources > div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+#phoneBanner{
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 24px;
+}
+#phoneBanner a{
+    color: #068aa1;
+    text-decoration: none;
+}
+/*#otherResources > div > div{
+    padding: 10px;
+    border: solid 1px #fff;
+    background-color: #068aa1;
+    border-radius: 4px;
+}*/

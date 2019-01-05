@@ -1,0 +1,148 @@
+*{
+    outline: none;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    overflow-y:scroll;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d0dadd;
+}
+h1{
+    line-height: 50px;
+}
+a:link, a:hover, a:active, a:visited{
+    text-decoration: none;
+    outline: none;
+}
+button, button:active, button:focus{
+    outline: none!important;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul, .wizardSteps ul{
+    list-style: none;
+}
+select{
+    max-height: 200px;
+    height: 200px;
+}
+label:hover{
+    cursor: pointer;
+}
+#openTransport,
+#enclosedTransport,
+#convertible,
+#modified,
+#carOk,
+#carNotOk{
+    position: absolute;
+    visibility: hidden;
+
+}
+#openTransport + label,
+#enclosedTransport + label,
+#convertible + label,
+#modified + label,
+#carOk + label,
+#carNotOk + label{
+	border: solid 1px lightgrey;
+	height: 30px;
+	width: 30px;
+	margin: 10px 20px 10px 0;
+	background-color: #fff;
+	display: inline-block;
+	font-size: 44px;
+	line-height: 12px;
+	color: #fff;
+	border-radius: 15px;
+	padding: 4px 0px 0 1px;
+	transition: background-color 0.5s ease, border-color 0.5s ease;
+    vertical-align: middle;
+}
+.radio-control #openTransport + label,
+.radio-control #enclosedTransport + label,
+.radio-control #convertible + label,
+.radio-control #modified + label,
+.radio-control #carOk + label,
+.radio-control #carNotOk + label{
+    margin: 10px 5px 10px 0;
+}
+#openTransport + label .glyphicon,
+#enclosedTransport + label .glyphicon,
+#convertible + label .glyphicon,
+#modified + label .glyphicon,
+#carOk + label .glyphicon,
+#carNotOk + label .glyphicon{
+	display: none;
+}
+#openTransport:checked + label,
+#enclosedTransport:checked + label,
+#convertible:checked + label,
+#modified:checked + label,
+#carOk:checked + label,
+#carNotOk:checked + label{
+	background-color: #01448b;
+	border-color: #01448b;
+}
+#openTransport:checked + label .glyphicon,
+#enclosedTransport:checked + label .glyphicon,
+#convertible:checked + label .glyphicon,
+#modified:checked + label .glyphicon,
+#carOk:checked + label .glyphicon,
+#carNotOk:checked + label .glyphicon{
+	display: block;
+	position: relative;
+	top: -2px;
+}
+.trackerIcon.symbol{
+    font-size: 1.7em;
+    line-height: 0.7;
+}
+.completeIcon{
+    color: #95cc28;
+}
+.wizardSteps button.manualStep{
+    font-size: 100%;
+    padding: 10px 20px;
+    width: auto;
+    line-height: 1;
+}
+.wizardSteps button.manualStep:after{
+    content: "➔";
+    font-size: 100%;
+}
+.quoteDetails table tr td{
+    vertical-align: middle;
+}
+.quoteDetails table tr td div{
+    display: table-cell;
+    vertical-align: middle;
+}
+table{
+    table-layout: fixed;
+}
+table .font2x{
+    line-height: 1px;
+    display: inline-block;
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+}
+.has-error{
+    background-color: rgba(255, 0, 0, 0.3);
+    color: #fff;
+    border: solid 1px #cc0000;
+}

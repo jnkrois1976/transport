@@ -1,0 +1,15 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+Allow: /
+Allow: /images/
+Disallow: /dev/
+Disallow: /js/
+Disallow: /fonts/
+Disallow: /system/
+Disallow: /css/
+Disallow: /svg/
+Disallow: /ads/
+Disallow: /test/
+Disallow: /vendor/

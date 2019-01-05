@@ -1,0 +1,997 @@
+@media only screen and (min-width: 320px) and (max-width: 374px){
+    .homepage main{
+        height: auto;
+    }
+    .homepage.animated main{
+        height: 80%;
+    }
+    header > div:first-child{
+        width: 80%;
+    }
+    header > nav{
+        width: 20%;
+    }
+    nav{
+        position: relative;
+        text-align: right;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        width: 320px;
+        top: 57px;
+        left: -256px;
+        background-color: rgba(0,0,0,0.9);
+        padding-left: 15px;
+        z-index: 99;
+        height: inherit;
+        text-align: left;
+    }
+    #topLinks, .font125, .trackerStep{
+        display: none;
+    }
+    nav #menuIcon{
+        padding: 25% 10px 0 0;
+        display: block;
+    }
+    main{
+        min-height: 350px;
+    }
+    #progressTracker{
+        max-height: 40px;
+    }
+    .trackerIcon{
+        display: block;
+    }
+    form#quoteGenerator{
+        width: 94%;
+    }
+    .wizardSteps ul.zipCitySuggest{
+        width: 280px;
+    }
+    #originCity + ul, #destCity + ul{
+        left: -151px;
+    }
+    #stepZero{
+        margin-top: 20px;
+    }
+    #stepZero ul{
+        flex-flow: column nowrap;
+        margin-top: 15px;
+    }
+    #stepZero ul li{
+        width: 100%;
+    }
+    .wizardSteps .form-group{
+        width: 100%;
+    }
+    .wizardSteps > div#carInfo, .wizardSteps > div#contactInfo{
+        flex-flow: column;
+    }
+    .calendar{
+        width: 90%;
+    }
+    .wizardSteps > div#shippingOptions{
+        flex-flow: column;
+    }
+    .wizardSteps > div#shippingOptions > div{
+        width: 100%;
+    }
+    .wizardSteps > div#shippingOptions fieldset > div > div{
+        width: 50%;
+    }
+    #openTransport + label, #enclosedTransport + label, #convertible + label, #modified + label, #carOk + label, #carNotOk + label{
+        margin: 0;
+    }
+    #detailsBreakdown, #generatedQuote{
+        flex-flow: column;
+    }
+    .wizardSteps .userQuote, #generatedQuote .userQuote{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .dollarAmount{
+        font-size: 4em;
+    }
+    .userQuote .btn-primary{
+        font-size: 100%;
+    }
+    #quoteOptions{
+        flex-flow: column;
+    }
+    div#quoteOptions > div{
+        width: 100%;
+    }
+    div#quoteOptions > div:first-child{
+        order: 2;
+    }
+    div#quoteOptions > div:last-child{
+        order: 1;
+    }
+    .arrow_box{
+        display: none!important;
+    }
+
+    #static_generator{
+        flex-flow: column;
+        width: 94%;
+    }
+    #static_generator > div{
+        width: 100%;
+    }
+    #static_generator > div:first-child{
+        display: none;
+    }
+    #static_generator_form{
+        width: 100%;
+    }
+    #static_generator fieldset{
+        padding: 10px 0;
+    }
+    .form-group.suggestBox{
+        width: 46%;
+    }
+    #static_generator fieldset > div#carData, .radio-control{
+        flex-flow: column;
+    }
+    body:not(.homepage) main > div > div{
+        width: 94%;
+        margin: 20px 3%;
+        padding: 0 10px;
+    }
+    #bookService, .expDateCvv{
+        flex-flow: column;
+    }
+    #bookService > fieldset, #bookService > div{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #bookService > div > fieldset, #bookService > fieldset{
+        padding: 10px;
+    }
+    #generatedQuoteWrapper{
+        width: 96%;
+        padding: 10px;
+    }
+    #carData > div{
+        width: 60%;
+    }
+    #carData > div:first-child{
+        width: 40%;
+    }
+
+
+    #testimonials ul{
+        flex-flow: column;
+    }
+    #testimonials ul li{
+        width: 80%;
+    }
+    #badgesAndSeals img{
+        max-height: 40px!important;
+        width: auto;
+    }
+    .homepage #welcomeBack .modal-dialog{
+        width: 300px;
+    }
+    .breakdownBox, #howItWorks > div, #generator_banner > div, #contactUs > div{
+        width: 100%;
+    }
+    #howItWorks, #generator_banner, #contactUs, #whatNow{
+        flex-flow: column;
+    }
+    #generator_banner a{
+        transform: scale(1);
+    }
+    footer > div:nth-child(1) > ul:nth-child(3){
+        display: none;
+    }
+    #detailsBreakdown table{
+        width: 100%;
+    }
+    .expDateCvv > div{
+        width: 50%;
+    }
+    .progress-bar{
+        display: none;
+    }
+    #serviceStatusWrapper{
+        flex-flow: column;
+    }
+    #serviceStatusWrapper > div:first-child{
+        width: 100%;
+    }
+    #serviceStatusWrapper div:last-child{
+        width: 100%;
+    }
+    #static_generator fieldset > div#radio-control-group{
+        flex-flow: column;
+        margin-top: 10px;
+    }
+    #static_generator fieldset > div#radio-control-group > div{
+        margin-bottom: 10px;
+        border-bottom: solid 1px #d4d4d4;
+    }
+    #static_generator fieldset > div#radio-control-group > div:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper > div{
+        flex-direction: column-reverse;
+        width: 50%;
+    }
+    #saveQuote{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 413px){
+    .homepage main{
+        height: auto;
+    }
+    .homepage.animated main{
+        height: 80%;
+    }
+    header > div:first-child{
+        width: 80%;
+    }
+    header > nav{
+        width: 20%;
+    }
+    nav{
+        position: relative;
+        text-align: right;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        width: 375px;
+        top: 67px;
+        left: -300px;
+        background-color: rgba(0,0,0,0.9);
+        padding-left: 15px;
+        z-index: 99;
+        height: inherit;
+        text-align: left;
+    }
+    #topLinks, .font125, .trackerStep{
+        display: none;
+    }
+    nav #menuIcon{
+        padding: 25% 10px 0 0;
+        display: block;
+    }
+    main{
+        min-height: 350px;
+    }
+    #progressTracker{
+        max-height: 40px;
+    }
+    .trackerIcon{
+        display: block;
+    }
+    form#quoteGenerator{
+        width: 94%;
+    }
+    .wizardSteps ul.zipCitySuggest{
+        width: 280px;
+    }
+    #originCity + ul, #destCity + ul{
+        left: -151px;
+    }
+    #stepZero{
+        margin-top: 20px;
+    }
+    #stepZero ul{
+        flex-flow: column nowrap;
+        margin-top: 15px;
+    }
+    #stepZero ul li{
+        width: 100%;
+    }
+    .wizardSteps .form-group{
+        width: 100%;
+    }
+    .wizardSteps > div#carInfo, .wizardSteps > div#contactInfo{
+        flex-flow: column;
+    }
+    .calendar{
+        width: 90%;
+    }
+    .wizardSteps > div#shippingOptions{
+        flex-flow: column;
+    }
+    .wizardSteps > div#shippingOptions > div{
+        width: 100%;
+    }
+    .wizardSteps > div#shippingOptions fieldset > div > div{
+        width: 50%;
+    }
+    #openTransport + label, #enclosedTransport + label, #convertible + label, #modified + label, #carOk + label, #carNotOk + label{
+        margin: 0;
+    }
+    #detailsBreakdown, #generatedQuote{
+        flex-flow: column;
+    }
+    .wizardSteps .userQuote, #generatedQuote .userQuote{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .dollarAmount{
+        font-size: 4em;
+    }
+    .userQuote .btn-primary{
+        font-size: 100%;
+    }
+    #quoteOptions{
+        flex-flow: column;
+    }
+    div#quoteOptions > div{
+        width: 100%;
+    }
+    div#quoteOptions > div:first-child{
+        order: 2;
+    }
+    div#quoteOptions > div:last-child{
+        order: 1;
+    }
+    .arrow_box{
+        display: none!important;
+    }
+
+    #static_generator{
+        flex-flow: column;
+        width: 94%;
+    }
+    #static_generator > div{
+        width: 100%;
+    }
+    #static_generator > div:first-child{
+        display: none;
+    }
+    #static_generator_form{
+        width: 100%;
+    }
+    #static_generator fieldset{
+        padding: 10px 0;
+    }
+    .form-group.suggestBox{
+        width: 46%;
+    }
+    #static_generator fieldset > div#carData, .radio-control{
+        flex-flow: column;
+    }
+    body:not(.homepage) main > div > div{
+        width: 94%;
+        margin: 20px 3%;
+        padding: 0 10px;
+    }
+    #bookService, .expDateCvv{
+        flex-flow: column;
+    }
+    #bookService > fieldset, #bookService > div{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #bookService > div > fieldset, #bookService > fieldset{
+        padding: 10px;
+    }
+    #generatedQuoteWrapper{
+        width: 94%;
+        padding: 10px;
+    }
+    #carData > div{
+        width: 60%;
+    }
+    #carData > div:first-child{
+        width: 40%;
+    }
+    #testimonials ul{
+        flex-flow: column;
+    }
+    #testimonials ul li{
+        width: 80%;
+    }
+    #badgesAndSeals img{
+        max-height: 40px!important;
+        width: auto;
+    }
+    .homepage #welcomeBack .modal-dialog{
+        width: 355px;
+    }
+    .breakdownBox, #howItWorks > div, #generator_banner > div, #contactUs > div{
+        width: 100%;
+    }
+    #howItWorks, #generator_banner, #contactUs, #whatNow{
+        flex-flow: column;
+    }
+    #generator_banner a{
+        transform: scale(1);
+    }
+    footer > div:nth-child(1) > ul:nth-child(3){
+        display: none;
+    }
+    #detailsBreakdown table{
+        width: 100%;
+    }
+    .expDateCvv > div{
+        width: 50%;
+    }
+    #logo{
+        justify-content: center;
+    }
+    .progress-bar{
+        display: none;
+    }
+    #serviceStatusWrapper{
+        flex-flow: column;
+    }
+    #serviceStatusWrapper > div:first-child{
+        width: 100%;
+    }
+    #serviceStatusWrapper div:last-child{
+        width: 100%;
+    }
+    #static_generator fieldset > div#radio-control-group{
+        flex-flow: column;
+        margin-top: 10px;
+    }
+    #static_generator fieldset > div#radio-control-group > div{
+        margin-bottom: 10px;
+        border-bottom: solid 1px #d4d4d4;
+    }
+    #static_generator fieldset > div#radio-control-group > div:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper > div{
+        flex-direction: column-reverse;
+        width: 50%;
+    }
+    #saveQuote{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .homepage main{
+        height: auto;
+    }
+    .homepage.animated main{
+        height: 80%;
+    }
+    header > div:first-child{
+        width: 80%;
+    }
+    header > nav{
+        width: 20%;
+    }
+    nav{
+        position: relative;
+        text-align: right;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        width: 414px;
+        top: 74px;
+        left: -331px;
+        background-color: rgba(0,0,0,0.9);
+        padding-left: 15px;
+        z-index: 99;
+        height: inherit;
+        text-align: left;
+    }
+    #topLinks, .font125, .trackerStep{
+        display: none;
+    }
+    nav #menuIcon{
+        padding: 25% 10px 0 0;
+        display: block;
+    }
+    main{
+        min-height: 350px;
+    }
+    #progressTracker{
+        max-height: 40px;
+    }
+    .trackerIcon{
+        display: block;
+    }
+    form#quoteGenerator{
+        width: 94%;
+    }
+    .wizardSteps ul.zipCitySuggest{
+        width: 280px;
+    }
+    #originCity + ul, #destCity + ul{
+        left: -151px;
+    }
+    #stepZero{
+        margin-top: 20px;
+    }
+    #stepZero ul{
+        flex-flow: column nowrap;
+        margin-top: 15px;
+    }
+    #stepZero ul li{
+        width: 100%;
+    }
+    .wizardSteps .form-group{
+        width: 100%;
+    }
+    .wizardSteps > div#carInfo, .wizardSteps > div#contactInfo{
+        flex-flow: column;
+    }
+    .calendar{
+        width: 90%;
+    }
+    .wizardSteps > div#shippingOptions{
+        flex-flow: column;
+    }
+    .wizardSteps > div#shippingOptions > div{
+        width: 100%;
+    }
+    .wizardSteps > div#shippingOptions fieldset > div > div{
+        width: 50%;
+    }
+    #openTransport + label, #enclosedTransport + label, #convertible + label, #modified + label, #carOk + label, #carNotOk + label{
+        margin: 0;
+    }
+    #detailsBreakdown, #generatedQuote{
+        flex-flow: column;
+    }
+    .wizardSteps .userQuote, #generatedQuote .userQuote{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .dollarAmount{
+        font-size: 4em;
+    }
+    .userQuote .btn-primary{
+        font-size: 100%;
+    }
+    #quoteOptions{
+        flex-flow: column;
+    }
+    div#quoteOptions > div{
+        width: 100%;
+    }
+    div#quoteOptions > div:first-child{
+        order: 2;
+    }
+    div#quoteOptions > div:last-child{
+        order: 1;
+    }
+    .arrow_box{
+        display: none!important;
+    }
+
+    #static_generator{
+        flex-flow: column;
+        width: 94%;
+    }
+    #static_generator > div{
+        width: 100%;
+    }
+    #static_generator > div:first-child{
+        display: none;
+    }
+    #static_generator_form{
+        width: 100%;
+    }
+    #static_generator fieldset{
+        padding: 10px 0;
+    }
+    .form-group.suggestBox{
+        width: 46%;
+    }
+    #static_generator fieldset > div#carData, .radio-control{
+        flex-flow: column;
+    }
+    body:not(.homepage) main > div > div{
+        width: 94%;
+        margin: 20px 3%;
+        padding: 0 10px;
+    }
+    #bookService, .expDateCvv{
+        flex-flow: column;
+    }
+    #bookService > fieldset, #bookService > div{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #bookService > div > fieldset, #bookService > fieldset{
+        padding: 10px;
+    }
+    #generatedQuoteWrapper{
+        width: 90%;
+        padding: 10px;
+    }
+    #carData > div{
+        width: 60%;
+    }
+    #carData > div:first-child{
+        width: 40%;
+    }
+    #testimonials ul{
+        flex-flow: column;
+    }
+    #testimonials ul li{
+        width: 80%;
+    }
+    #badgesAndSeals img{
+        max-height: 40px!important;
+        width: auto;
+    }
+    .homepage #welcomeBack .modal-dialog{
+        width: 394px;
+    }
+    .breakdownBox, #howItWorks > div, #generator_banner > div, #contactUs > div{
+        width: 100%;
+    }
+    #howItWorks, #generator_banner, #contactUs, #whatNow{
+        flex-flow: column;
+    }
+    #generator_banner a{
+        transform: scale(1);
+    }
+    footer > div:nth-child(1) > ul:nth-child(3){
+        display: none;
+    }
+    #detailsBreakdown table{
+        width: 100%;
+    }
+    .expDateCvv > div{
+        width: 50%;
+    }
+    #logo{
+        justify-content: center;
+    }
+    .progress-bar{
+        display: none;
+    }
+    #serviceStatusWrapper{
+        flex-flow: column;
+    }
+    #serviceStatusWrapper > div:first-child{
+        width: 100%;
+    }
+    #serviceStatusWrapper div:last-child{
+        width: 100%;
+    }
+    #static_generator fieldset > div#radio-control-group{
+        flex-flow: column;
+        margin-top: 10px;
+    }
+    #static_generator fieldset > div#radio-control-group > div{
+        margin-bottom: 10px;
+        border-bottom: solid 1px #d4d4d4;
+    }
+    #static_generator fieldset > div#radio-control-group > div:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper > div{
+        flex-direction: column-reverse;
+        width: 50%;
+    }
+    #saveQuote{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    header > div:first-child{
+        width: 30%;
+    }
+    header > nav{
+        width: 70%;
+    }
+    nav ul li{
+        flex-grow: 0;
+        width: 20%;
+    }
+    header > div:last-child{
+        width: 22%;
+    }
+    form#quoteGenerator{
+        width: 90%;
+    }
+    #static_generator{
+        width: 96%;
+    }
+    #progressTracker > div:first-child > div{
+        width: 20%;
+    }
+    .wizardSteps .form-group{
+        width: 30%;
+    }
+    .trackerLgFont{
+        font-size: 2em;
+    }
+    .trackerMdFont{
+        font-size: 1em;
+    }
+    .wizardSteps .userQuote, #generatedQuote .userQuote{
+        width: 32%;
+    }
+    div#quoteOptions > div{
+        width: 46%;
+    }
+    a.btn-primary{
+        font-size: 100%;
+        padding: 10px;
+    }
+    #static_generator fieldset{
+        width: 100%;
+        padding: 0;
+    }
+    #static_generator > div:first-child h1 + div span{
+        width: 46%;
+    }
+    #features{
+        padding: 20px 4px;
+        margin: 0 auto;
+    }
+    #features ul li{
+        font-size: 12px;
+    }
+    body:not(.homepage) main > div > div{
+        width: 96%;
+    }
+    #bookService{
+        flex-flow: column;
+    }
+    #bookService > fieldset{
+        width: 100%;
+    }
+    #bookService > fieldset > div{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #bookService > fieldset > div > div{
+        width: 32%;
+    }
+    #addressDetails hr{
+        display: none;
+    }
+    #addressDetails > div{
+        width: 100%;
+    }
+    #bookService > div{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #bookService > div > fieldset, #bookService > div > div{
+        width: 48%;
+    }
+    #generatedQuoteWrapper{
+        width: 86%;
+        padding: 10px;
+    }
+    #howItWorks > div{
+        width: 32%;
+    }
+    footer > div:first-child{
+        width: 96%;
+    }
+    #testimonials ul li{
+        width: 20%;
+    }
+    #logo{
+        justify-content: center;
+    }
+    #static_generator fieldset > div#radio-control-group{
+        flex-flow: column;
+        margin-top: 10px;
+    }
+    #static_generator fieldset > div#radio-control-group > div{
+        margin-bottom: 10px;
+        border-bottom: solid 1px #d4d4d4;
+    }
+    #static_generator fieldset > div#radio-control-group > div:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper > div{
+        flex-direction: column-reverse;
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+    header > div:first-child{
+        width: 30%;
+    }
+    header > nav{
+        width: 70%;
+    }
+    nav ul li{
+        flex-grow: 0;
+        width: 20%;
+    }
+    header > div:last-child{
+        width: 22%;
+    }
+    form#quoteGenerator{
+        width: 90%;
+    }
+    #static_generator{
+        width: 96%;
+    }
+    #progressTracker > div:first-child > div{
+        width: 20%;
+    }
+    .wizardSteps .form-group{
+        width: 30%;
+    }
+    .trackerLgFont{
+        font-size: 2em;
+    }
+    .trackerMdFont{
+        font-size: 1em;
+    }
+    .wizardSteps .userQuote, #generatedQuote .userQuote{
+        width: 32%;
+    }
+    div#quoteOptions > div{
+        width: 46%;
+    }
+    a.btn-primary{
+        font-size: 100%;
+        padding: 10px;
+    }
+    #static_generator fieldset{
+        width: 100%;
+        padding: 0;
+    }
+    #static_generator > div:first-child h1 + div span{
+        width: 46%;
+    }
+    #features{
+        padding: 20px 4px;
+        margin: 0 auto;
+    }
+    #features ul li{
+        font-size: 12px;
+    }
+    body:not(.homepage) main > div > div{
+        width: 96%;
+    }
+    #bookService{
+        flex-flow: column;
+    }
+    #bookService > fieldset{
+        width: 100%;
+    }
+    #bookService > fieldset > div{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #bookService > fieldset > div > div{
+        width: 32%;
+    }
+    #addressDetails hr{
+        display: none;
+    }
+    #addressDetails > div{
+        width: 100%;
+    }
+    #bookService > div{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #bookService > div > fieldset, #bookService > div > div{
+        width: 48%;
+    }
+    #generatedQuoteWrapper{
+        width: 80%;
+        padding: 10px;
+    }
+    #howItWorks > div{
+        width: 32%;
+    }
+    footer > div:first-child{
+        width: 96%;
+    }
+    #testimonials ul li{
+        width: 20%;
+    }
+    #logo{
+        justify-content: center;
+    }
+    #static_generator fieldset > div#radio-control-group{
+        flex-flow: column;
+        margin-top: 10px;
+    }
+    #static_generator fieldset > div#radio-control-group > div{
+        margin-bottom: 10px;
+        border-bottom: solid 1px #d4d4d4;
+    }
+    #static_generator fieldset > div#radio-control-group > div:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper > div{
+        flex-direction: column-reverse;
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1224px) and (max-width: 1440px) {
+    #static_generator > div:first-child{
+        width: 60%;
+    }
+    #static_generator > div:last-child{
+        width: 40%;
+    }
+    a.btn-primary{
+        font-size: 100%;
+        padding: 10px;
+    }
+    /*.wizardSteps .userQuote, #generatedQuote .userQuote{
+        width: 32%;
+    }*/
+    #static_generator fieldset > div#radio-control-group{
+        flex-flow: column;
+        margin-top: 10px;
+    }
+    #static_generator fieldset > div#radio-control-group > div{
+        margin-bottom: 10px;
+        border-bottom: solid 1px #d4d4d4;
+    }
+    #static_generator fieldset > div#radio-control-group > div:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper:last-child{
+        border-bottom: none;
+    }
+    #static_generator fieldset > div#radio-control-group > div > div.radioWrapper > div{
+        flex-direction: column-reverse;
+        width: 50%;
+    }
+}

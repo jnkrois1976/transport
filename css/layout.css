@@ -1,0 +1,536 @@
+body, header, #logo, nav, nav ul, .homepage main, #progressTracker > div:first-child, #content, form, footer{
+    display: flex;
+}
+body, .homepage main, #content, form {
+    flex-flow: column nowrap;
+}
+header, #logo, nav, nav ul, #progressTracker > div:first-child, footer{
+    flex-flow: row nowrap;
+}
+header{
+    justify-content: space-between;
+    min-height: 100px;
+    align-items: center;
+}
+header > div{
+    flex-grow: 1;
+    flex-basis: 15%;
+}
+header > div:last-child{
+    text-align: end;
+}
+#loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+#loading > div{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+}
+#loading img{
+    width: 120px;
+    height: 120px;
+}
+
+#logo{
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    flex-grow: 2;
+    flex-basis: 80%;
+    justify-content: center;
+}
+nav ul{
+    justify-content: space-between;;
+    width: 80%;
+}
+.homepage main{
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+nav #menuIcon{
+    margin-right: 10px;
+    display: none;
+}
+#progressTracker{
+    /*position: absolute;*/
+    width: 100%;
+    top: -101px;
+    opacity: 0;
+}
+#progressTracker > div:first-child {
+    min-height: 99px;
+}
+#progressTracker > div:first-child > div{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 6px;
+}
+.arrow_box {
+    position: absolute;
+    background: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #23303d;
+    font-weight: 600;
+    bottom: -35px;
+    left: 50%;
+    right: 0;
+    width: 50%;
+    margin-left: -25%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+}
+.arrow_box:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.trackerStep:hover{
+    cursor: pointer;
+}
+.trackerStep:hover + .arrow_box{
+    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+#content{
+    align-items: center;
+    flex-grow: 1;
+}
+#content > form, #static_generator{
+    width: 80%;
+    overflow: hidden;
+    flex-grow: 1;
+    position: relative;
+}
+#stepZero{
+    padding-top: 80px;
+    text-align: center;
+    /*height: 300px;*/
+    min-height: 300px;
+    z-index: 2;
+}
+#stepZero ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 40px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #000;
+}
+#static_generator > div:first-child ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+}
+#static_generator > div:first-child ul li{
+    height: 34px;
+    line-height: 34px;
+}
+#stepZero ul li{
+    width: 33%;
+}
+#stepZero ul li::before, #static_generator > div:first-child ul li::before{
+    content: "\2605 ";
+    color:#95cc28;
+}
+#static_generator > div:first-child ul li::before{
+    padding-right: 10px;
+}
+.wizardSteps{
+    text-align: center;
+    min-height: 300px;
+    /*height: 300px;*/
+    opacity: 0;
+    margin-top: 400px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.wizardSteps .userQuote, #generatedQuote .userQuote{
+    border: solid 4px #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+.wizardSteps .userQuote a{
+    display: block;
+}
+.wizardSteps .form-group{
+    width: 400px;
+    position: relative;
+}
+#static_generator .form-group{
+    position: relative;
+}
+#static_generator .form-group.suggestBox{
+    width: 40%;
+}
+#formattedDate{
+    line-height: 60px;
+    margin-left: 10px;
+}
+.wizardSteps > div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.wizardSteps > div#carInfo, .wizardSteps > div#shippingOptions, .wizardSteps > div#generatedQuote, .wizardSteps > div#quoteOptions{
+    justify-content: space-around;
+}
+.wizardSteps > div#quoteOptions > div{
+    width: 35%;
+    padding-bottom: 10px;
+}
+.wizardSteps > div#quoteOptions > div small{
+    text-align: justify;
+    display: block;
+}
+.wizardSteps > div#shippingOptions > div{
+    width: 20%;
+}
+.wizardSteps > div#shippingOptions fieldset div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.wizardSteps > div#shippingOptions fieldset div div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.wizardSteps #origin, .wizardSteps #destination{
+    /*min-height: 200px;*/
+}
+.wizardSteps#stepFour{
+    min-height: 360px;
+}
+.wizardSteps#stepFour button{
+    margin-top: 10px;
+}
+.wizardSteps#stepFive, .wizardSteps#stepSix{
+    margin-top: 440px;
+}
+.wizardSteps#stepSix.active{
+    height: auto;
+    /*margin-top: 20px!important;*/
+}
+.wizardSteps ul, #static_generator ul.zipCitySuggest{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    max-height: 300px;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.wizardSteps ul li, #static_generator ul.zipCitySuggest li{
+    text-align: left;
+    padding: 5px 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.wizardSteps ul li:hover, #static_generator ul.zipCitySuggest li:hover{
+    color: #fff;
+    background-color: #068aa1;
+}
+.calendar {
+	border: solid 1px #D4D4D4;
+	border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #ccc;
+    width: 50%;
+}
+
+.calendar td,
+.calendar th {
+	vertical-align: middle;
+	border: solid 1px #d4d4d4;
+	text-align: center;
+	min-width: 30px;
+	height: 30px;
+}
+.calendar td.future span{
+    display: block;
+    color: #777;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    height: 100%;
+    line-height: 30px;
+}
+.calendar td.future span.selected, .calendar td.future span.selected:hover{
+    background-color: #95cc28;
+    color: #fff;
+    font-style: italic;
+}
+.calendar td.future span:hover{
+    background-color: #068aa1;
+    color: #fff;
+    cursor: pointer;
+}
+#generatedQuoteWrapper {
+    display: none;
+}
+#generatedQuote h3{
+    margin-top: 10px;
+}
+#quoteOptions h4{
+    margin-top: 0;
+}
+#saveSuccess{
+    display: none;
+}
+footer{
+    min-height: 160px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+body:not(.homepage) footer{
+    flex-basis: 100%;
+}
+body:not(.homepage) main > div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #efefef;
+}
+body:not(.homepage) main > div > div{
+    width: 80%;
+    margin: 20px;
+    padding: 0 20px;
+    border: solid 3px #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+#detailsBreakdown, #generatedQuote{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#detailsBreakdown, #generatedQuote{
+    justify-content: space-between;
+}
+#generatedQuote .userQuote{
+    text-align: center;
+    padding: 0 10px;
+}
+#detailsBreakdown table{
+    width: auto;
+}
+.breakdownBox{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.breakdownBox > h3{
+    width: auto;
+    margin-top: 0;
+}
+#static_generator{
+    margin: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#static_generator > div{
+    width: 50%;
+    padding: 10px;
+}
+#static_generator > div:first-child{
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#static_generator fieldset{
+    padding: 20px;
+}
+#static_generator fieldset h1{
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #95cc28;
+}
+#static_generator fieldset > div{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#static_generator fieldset > div.form-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+#static_generator fieldset > div#radio-control-group{
+    margin-bottom: 20px;
+    border-bottom: solid 1px #95cc28;
+}
+#static_generator fieldset > div#radio-control-group, #carData{
+    justify-content: space-between;
+}
+#static_generator > div:first-child h1 + div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#static_generator > div:first-child h1 + div span{
+    font-weight: 100;
+    width: 40%;
+}
+#static_generator > div:last-child{
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #23303d;
+}
+.radio-control-group, #features{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#features{
+    width: 95%;
+    margin: 0 20px;
+    border: solid 1px rgba(149,204,40,0.3);
+    padding: 20px;
+    align-self: flex-start;
+}
+#features ul{
+    margin: 0;
+    padding: 0;
+}
+.radio-control{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+#generatedQuoteWrapper{
+    width: 100%;
+    padding: 10px;
+}
+#generatedQuoteWrapper h1{
+    margin-top: 0;
+}
+#generatedQuoteWrapper .userQuote{
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#generatedQuoteWrapper .btn-primary{
+    font-size: 100%;
+    padding: 10px;
+}
+#quoteOptions{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#quoteOptions > div{
+    width: 45%;
+}
+#quoteOptions small{
+    display: inline-block;
+    line-height: 12px;
+}
+#bookService{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#bookService > fieldset{
+    width: 32%;
+    border: solid 1px #95cc28;
+    padding: 0 20px;
+}
+#bookService > fieldset:last-child{
+    margin-right: 0;
+}
+#bookService > div{
+    width: 32%;
+    padding: 0;
+}
+#bookService > div > fieldset{
+    border: solid 1px #95cc28;
+    padding: 0 20px;
+}
+#bookService > fieldset legend, #bookService > div > fieldset legend{
+    display: block;
+    width: auto;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+#addressDetails .form-group, .expDateCvv, #billingDetails .form-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#autocomplete2, #autocomplete, #autocomplete3{
+    width: 100%;
+}
+#street_number2, #street_number, #street_number3{
+    width: 30%;
+}
+#route2, #route, #route3{
+    width: 65%;
+}
+#locality2, #locality, #locality3 {
+    width: 55%;
+}
+#administrative_area_level_12, #administrative_area_level_1, #administrative_area_level_13{
+    width: 20%;
+}
+#postal_code2, #postal_code, #postal_code3{
+    width: 20%;
+}
+.card-logos{
+	margin-top: 10px;
+}
+.card-logos img{
+	width:60px;
+	height: auto;
+	margin-right: 5px;
+}
+#carYearOlder, #carModelOlder, #carMakeOlder{
+    display: none;
+}
+.autoSavedQuote{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 70%;
+}
+.autoSavedQuote > div, .autoSavedQuote > p{
+    text-align: left;
+}
